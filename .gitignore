@@ -1,0 +1,17 @@
+# Node
+server/node_modules/
+client/node_modules/
+
+# Angular
+client/dist/
+
+# Logs
+*.log
+
+# Environment files (ajusta según tu estructura)
+client/src/environments/environment.ts
+client/src/environments/environment.prod.ts
+
+# OS
+.DS_Store
+Thumbs.db
