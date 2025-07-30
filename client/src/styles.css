@@ -1,1 +1,206 @@
 /* You can add global styles to this file, and also import other style files */
+.panel::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  .panel::-webkit-scrollbar-thumb {
+    background-color: #b7bbb877;
+    border-radius: 10px;
+  }
+  
+  .panel::-webkit-scrollbar-track {
+    background: #e9ecef;
+  }
+
+
+
+.icon-custom {
+    
+    color:rgba(49, 49, 49, 0.452);/* Establece el color del texto en blanco */
+    cursor: pointer; /* Cambiar el cursor a una manito cuando el ratón está sobre el icono */
+    font-weight: bold; 
+    font-size: 50px;
+    
+}
+
+
+
+.titulo_menu{
+    
+    font-size: 1.8rem;
+    font-weight: 700;
+    /* color: #26547ae0; */
+    color: #1a3a55cb;
+    margin: 0px;
+ 
+}
+
+.subtitulo_menu{
+
+    font-size: 1rem;
+    font-weight: 500;
+    color: #284761e7;
+    margin: 0px;
+    
+}
+
+.hand_cursor{
+    cursor: pointer; /*  convierte el cursor en una mano */
+    
+}
+
+.font-weight-bold{
+    font-weight: bold;
+}
+
+img{
+    margin: 0px;
+}
+
+
+
+
+/* modifica la posicion y alinacion de todos los lementos del encabezado de la pagina */
+.encabezado_pages{
+    display: flex;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+    text-align: center; /* Centra el texto del <p> */      
+}
+
+/* boton volver */
+.btn-volver{
+    background-color:  #176091;
+    border-radius: 5px;
+    border-color: #176091;   
+}
+
+.icon-custom-encabezado {
+    
+    font-weight: bold; 
+    font-size: 3.5rem;
+    color: #929FB1;
+    margin-right: 10px;
+
+}
+
+/* texto de correo */
+.text-correo{
+    text-transform: lowercase !important;
+    color: #3f91c7;
+   
+}
+
+/* texto de encabezado de formulario */
+.form-label{
+    
+    color: rgba(17, 55, 90, 0.662);
+    font-weight: 700;
+    letter-spacing: 0.4px;
+   
+}
+
+.form-control{
+    text-transform:uppercase;
+}
+
+
+/* iconos */
+i{
+    cursor: pointer;
+}
+.bi-pencil-square {
+    display: inline-block; /* Permite que transform funcione correctamente */
+    transition: transform 0.1s ease-in-out, color 0.2s ease-in-out; /* Suaviza el efecto */
+}
+
+.bi-pencil-square:hover {
+    color: #206b1d;
+    transform: scale(1.2); /* Aumenta el tamaño sin alterar el diseño */
+}
+
+
+.bi-trash3-fill{
+    color: rgba(167, 62, 62, 0.836);
+}
+.bi-trash3-fill:hover{
+    color: rgb(211, 11, 11);
+}
+
+.bi-pencil-fill {
+    color: #176091;
+    
+}
+.bi-pencil-fill:hover {
+    color: #408ec2;
+}
+
+.modal-header{
+    background-color: #176091;
+}
+
+/* boton guardar */
+.guardar-btn{
+    background-color: #B9EACE;
+    color: #227243;
+    border: 1px solid #92DFB2;
+    box-shadow: 1px 1px 3px 0 #D5DDE5;
+    font-weight: 600
+}
+.guardar-btn:hover{
+    background-color:  #86d993;
+    color: #227243;
+    border: 1px solid #92DFB2;
+    box-shadow: 1px 1px 3px 0 #D5DDE5;
+    font-weight: 600
+
+}
+
+.cancelar-btn{
+   
+    background-color: #E1E7EB;
+    color: #6E7A89;
+    border: 1px solid #dde2e9;
+    box-shadow: 1px 1px 3px 0 #D5DDE5;
+    font-weight: 600;
+    
+}
+.cancelar-btn:hover{
+   
+    background-color: #cdcecf;
+    color: #525355;
+    border: 1px solid #d6dadf;
+    box-shadow: 1px 1px 3px 0 #D5DDE5;
+    font-weight: 600;
+    
+}
+
+.rechazar-btn {
+    background-color: #F4B5B5; /* rojo claro */
+    color: #8B1E1E; /* rojo oscuro */
+    border: 1px solid #E89A9A; /* rojo medio */
+    box-shadow: 1px 1px 3px 0 #D5DDE5;
+    font-weight: 600;
+}
+
+.rechazar-btn:hover {
+    background-color: #E88A8A; /* rojo más intenso al pasar el mouse */
+    color: #8B1E1E;
+    border: 1px solid #E89A9A;
+    box-shadow: 1px 1px 3px 0 #D5DDE5;
+    font-weight: 600;
+}
+
+.registrar-btn{
+    background-color: #fcf0d3cc;
+    color: #C28E0E;
+    border: 1px solid #FAE5B3;
+    box-shadow: 1px 1px 3px 0
+}
+
+.registrar-btn:hover{
+    background-color: #faeac6;
+    color: #C28E0E;
+    border: 1px solid #f8e7be;
+    box-shadow: 1px 1px 3px 0
+}

@@ -1,0 +1,31 @@
+<!-- ESTILOS EXTERNOS (solo si no los cargas globalmente) -->
+<link rel="stylesheet" href="/fonts/linearicons/style.css">
+<link rel="stylesheet" href="/css/style.css">
+
+<div class="wrapper">
+  <div class="inner">
+    <img src="/images/image-1.png" alt="" class="image-1" width="36%" >
+    <form>
+      <h3>GustaDent</h3>
+      <div class="form-holder">
+        <span class="lnr lnr-user"></span>
+        <input type="text" class="form-control" placeholder="Username" name="username" [(ngModel)]="credentials.username">
+      </div>
+      
+     
+      <div class="form-holder">
+        <span class="lnr lnr-lock"></span>
+        <input type="password" class="form-control" placeholder="Password" name="password" [(ngModel)]="credentials.password" (keydown.enter)="login()">
+      </div>
+      
+      <button type="button" (click)="login()">
+        <span>Entrar</span>
+      </button>
+    </form>
+    <img src="/images/image-2.png" alt="" class="image-2" width="30%">
+  </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/main.js"></script>

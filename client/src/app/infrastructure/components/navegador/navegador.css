@@ -1,0 +1,24 @@
+.navbar{
+    background-color: #accffe;
+
+    padding: 0%;
+    margin: 0px;
+}
+
+.logo_text, .user_text{
+    font-weight: bold; /* Hace el texto más grueso */
+    color:rgba(47, 63, 116, 0.614);/* Establece el color del texto en blanco */   
+    font-size: 19px;
+}
+
+.icon-custom {
+    
+    color:rgba(47, 63, 116, 0.614);/* Establece el color del texto en blanco */
+    cursor: pointer; /* Cambiar el cursor a una manito cuando el ratón está sobre el icono */
+    font-weight: bold; 
+    font-size: 19px;
+}
+
+.icon-custom:hover {
+    color:white
+  }

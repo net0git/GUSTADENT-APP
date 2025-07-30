@@ -1,0 +1,40 @@
+.atencion-encabezado{
+    background-color: antiquewhite; 
+    border-radius: 10px;
+}
+
+.atencion-encabezado p{
+    margin-bottom: 0px;
+    margin: 8px;
+}
+
+.atencion-datos-paciente{
+    background-color: rgb(215, 236, 250); 
+    border-radius: 10px;
+}
+
+.atencion-datos-paciente p{
+    margin-bottom: 0px;
+    margin: 8px;
+}
+
+
+.subrayado {
+  width: 150px;              /* tamaño fijo */
+  height: 3px;               /* grosor de la línea */
+  background-color: black;  /* color de la línea */
+  margin-top: 2px;           /* separación con el texto */
+  margin-bottom: 10px;       /* separación con el siguiente texto */
+}
+
+.container{
+    width: 40%;
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 100vw;
+  }
+
+  
+}

@@ -113,7 +113,7 @@ class UsuarioController {
                 res.json({
                     success: true,
                     id_usuario: usuarioRest.id_usuario,
-                    usuario: usuarioRest.usuario,
+                    username: usuarioRest.username,
                     nombre: usuarioRest.nombre,
                     ap_paterno: usuarioRest.ap_paterno,
                     ap_materno: usuarioRest.ap_materno,

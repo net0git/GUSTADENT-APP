@@ -43,10 +43,7 @@ class UsuarioController {
     }
   }
 
-  public async listarUsuarios(
-    req: Request,
-    res: Response
-  ): Promise<any> {
+  public async listarUsuarios(req: Request, res: Response): Promise<any> {
     try {
       const consulta = `SELECT * FROM usuarios`;
       const usuarios = await pool.query(consulta);
@@ -106,22 +103,21 @@ class UsuarioController {
       // Comparar contraseñas
       const esPasswordCorrecto = await comparar(password, usuarioRest.password);
 
-      if (!esPasswordCorrecto) {
+      if ( !esPasswordCorrecto) {
         res.status(401).json({ error: "Contraseña incorrecta." });
         return; // Agrega el return aquí para evitar continuar con el código
-      }
-
+      } 
       // Si todo está correcto, responder con datos del usuario
-      res.json({
-        success: true,
-        id_usuario: usuarioRest.id_usuario,
-        usuario: usuarioRest.usuario,
-        nombre: usuarioRest.nombre,
-        ap_paterno: usuarioRest.ap_paterno,
-        ap_materno: usuarioRest.ap_materno,
-        dni: usuarioRest.dni,
-        estado: usuarioRest.estado,
-      });
+        res.json({
+          success: true,
+          id_usuario: usuarioRest.id_usuario,
+          username: usuarioRest.username,
+          nombre: usuarioRest.nombre,
+          ap_paterno: usuarioRest.ap_paterno,
+          ap_materno: usuarioRest.ap_materno,
+          dni: usuarioRest.dni,
+          estado: usuarioRest.estado,
+        });
     } catch (error) {
       console.error("Error fatal al validar el login:", error);
       res.status(500).json({ error: "Error interno del servidor." });

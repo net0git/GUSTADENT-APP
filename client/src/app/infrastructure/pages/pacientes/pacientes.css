@@ -1,0 +1,56 @@
+.panel{
+    background-color: aliceblue;
+    height: 100vh;
+}
+.table_header_pacientes tr th {
+  background-color: #205c89c5 !important; /* morado */
+  color: white !important;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.table_header_pacientes th:first-child {
+  border-top-left-radius: 0.5rem;
+}
+
+.table_header_pacientes th:last-child {
+  border-top-right-radius: 0.5rem;
+}
+
+.titulo {
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: #373a3ca5;
+}
+
+.subtitulo {
+  font-weight: 400;
+  font-size: 1rem;
+  color: gray;
+  
+}
+
+.nombre_paciente{
+    color: rgba(32, 172, 144, 0.864);
+    font-weight: 500;
+}
+
+.table_item{
+    color: rgb(87, 88, 88);
+}
+
+/* ancho modal */
+.modal-custom-width {
+  max-width: 350px; /* ajusta el valor a tu gusto */
+}
+
+@media (max-width: 576px) {
+  .modal-custom-width {
+    max-width: 100vw;
+  }
+
+  .guardar-btn{
+    width: 100%;
+    padding: 2% ;
+  }
+}

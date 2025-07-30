@@ -1,0 +1,79 @@
+<div class="panel-principal" >
+    <app-navegador/>
+
+    <div class="container">
+        <div class="row presentacion_system ">
+            <div class="col-sm-12 col-md-4 d-flex justify-content-end ">
+                <img src="/images/logo/logo.jpg" style="width: 200px;" alt="logo">
+            </div>
+
+            <div class=" col-sm-12 col-md-8">
+                <p class="titulo_menu justify-content-start m-0">SISTEMA DE CONTROL DE PACINETES Y ATENCIONES</p>
+                <p class="subtitulo_menu">Encuentra la información que necesitas de forma rápida y segura </p>
+            </div>
+        </div>
+        
+        <div class="row d-flex justify-content-center">
+
+            <hr>
+
+            <!-- PACIENTES-->
+            <div class="tarjeta col-xl-3 col-md-6 mb-4 hand_cursor" (click)="pacientesPage()">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1 "> PACIENTES</div>
+                            </div>
+                            <div class="col-auto">
+                                <img src="/images/icono/paciente.png" alt="" width="64px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTROL DE ATENCIONES -->
+            <div class=" tarjeta col-xl-3 col-md-6 mb-4 hand_cursor" (click)="atencionesPage()">
+                <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                    CONTROL DE ATENCIONES</div>
+                            
+                            </div>
+                            <div class="col-auto">
+                                <img src="/images/icono/atenciones.png" alt="" width="64px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- CONSULTAS TUC'S -->
+            <div class=" tarjeta col-xl-3 col-md-6 mb-4 hand_cursor" (click)="reportesPage()">
+                <div class="card border-left-danger shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">REPORTES</div>
+                                
+                            </div>
+                            <div class="col-auto">
+                                <img src="/images/icono/reportes3.png" alt="" width="64px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <hr>
+        </div>
+    </div>
+
+
+
+</div>

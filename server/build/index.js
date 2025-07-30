@@ -16,20 +16,20 @@ class Server {
         this.ruotes();
     }
     config() {
-        this.app.set('port', process.env.PORT || 3000);
-        this.app.use((0, morgan_1.default)('dev'));
+        this.app.set("port", process.env.PORT || 3000);
+        this.app.use((0, morgan_1.default)("dev"));
         this.app.use((0, cors_1.default)());
-        this.app.use(express_1.default.json({ limit: '100mb' }));
-        this.app.use(express_1.default.urlencoded({ limit: '100mb', extended: true }));
+        this.app.use(express_1.default.json({ limit: "100mb" }));
+        this.app.use(express_1.default.urlencoded({ limit: "100mb", extended: true }));
     }
     ruotes() {
-        this.app.use('/', usuarioRoutes_1.default);
-        this.app.use('/', atencionRoutes_1.default);
-        this.app.use('/', locacionRoutes_1.default);
+        this.app.use("/", usuarioRoutes_1.default);
+        this.app.use("/", atencionRoutes_1.default);
+        this.app.use("/", locacionRoutes_1.default);
     }
     star() {
-        this.app.listen(this.app.get('port'), () => {
-            console.log('server listening in port ', this.app.get('port'));
+        this.app.listen(this.app.get("port"), "0.0.0.0", () => {
+            console.log("server listening on port", this.app.get("port"));
         });
     }
 }
