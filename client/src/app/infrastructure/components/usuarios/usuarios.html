@@ -2,7 +2,7 @@
     <i class="bi bi-people-fill icon-custom" style="font-size: 3rem;"></i>
     <div class="text-start mx-4">
         <p class="titulo_menu mb-0">Usuarios del sistema</p>
-        <p style="font-size: 1.1rem ">Registro de todos los usuarios del sistema </p>
+        <p class="titulo_menor">Registro de todos los usuarios del sistema </p>
     </div>
 </div>
 
@@ -10,9 +10,35 @@
     <form class="row mx-auto mb-4">
 
         <div class="col-auto">
-            <button type="button" class="guardar-btn" (click)="openModalUsuario()"><i class="bi bi-person-add"></i> nuevo usuario</button>
+            <button type="button" class="guardar-btn" (click)="openModalUsuario()"><i class="bi bi-person-add"></i>
+                nuevo usuario</button>
         </div>
     </form>
+
+    <section class="table">
+        <div class="table-responsive">
+            <table class="table table-hover text-center">
+                <thead class="table_header_usuarios">
+                    <tr>
+                        <th scope="col">Nro</th>
+                        <th scope="col" class="text-start">PACIENTE</th>
+                        <th scope="col">USERNAME</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let usuario of lista_usuarios; index as i">
+                        <th scope="row" class="table_item">{{ i + 1 }}</th>
+                        <td class="text-start nombre_usuario">{{ usuario.nombre + ' ' + usuario.ap_paterno + ' '+ usuario.ap_materno }}</td>
+                        <td class="table_item">{{ usuario.username }}</td>
+                       
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+
 </div>
 
 <div class="modal fade" id="modalUsuario" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -29,38 +55,45 @@
                     <fieldset>
                         <div class="form-group">
                             <label for="dni" class="form-label mt-2" name="dni">Documento de Identidad (DNI):</label>
-                            <input type="text" class="form-control form-control-sm" name="dni" maxlength="8">
+                            <input type="text" class="form-control form-control-sm" name="dni"
+                                [(ngModel)]="data_usuario.dni" appSoloNumeros maxlength="8">
                         </div>
                         <div class="form-group">
                             <label for="nombre" class="form-label mt-2" name="nombre">Nombre(s):</label>
-                            <input type="text" class="form-control form-control-sm" name="nombre">
+                            <input type="text" class="form-control form-control-sm" name="nombre"
+                                [(ngModel)]="data_usuario.nombre" appSoloLetras>
                         </div>
                         <div class="form-group">
                             <label for="ap_paterno" class="form-label mt-3">Apellido Paterno:</label>
-                            <input type="text" class="form-control form-control-sm" name="ap_paterno">
+                            <input type="text" class="form-control form-control-sm" name="ap_paterno"
+                                [(ngModel)]="data_usuario.ap_paterno" appSoloLetras>
                         </div>
                         <div class="form-group">
                             <label for="ap_materno" class="form-label mt-3">Apellido Materno:</label>
-                            <input type="text" class="form-control form-control-sm" name="ap_materno">
+                            <input type="text" class="form-control form-control-sm" name="ap_materno"
+                                [(ngModel)]="data_usuario.ap_materno" appSoloLetras>
                         </div>
                         <div class="form-group">
                             <label for="telefono" class="form-label mt-3">Telefono:</label>
-                            <input type="text" class="form-control form-control-sm" name="telefono" maxlength="9">
+                            <input type="text" class="form-control form-control-sm" name="telefono"
+                                [(ngModel)]="data_usuario.telefono" appSoloNumeros maxlength="9">
                         </div>
 
                         <div class="form-group">
                             <label for="username" class="form-label mt-3">UserName:</label>
-                            <input type="text" class="form-control form-control-sm" name="username">
+                            <input type="text" class="form-control form-control-sm" name="username"
+                                [(ngModel)]="data_usuario.username" appSoloLetras>
                         </div>
 
                         <div class="form-group">
                             <label for="password" class="form-label mt-3">Password:</label>
-                            <input type="password" class="form-control form-control-sm" name="password">
+                            <input type="password" class="form-control form-control-sm" name="password"
+                                [(ngModel)]="data_usuario.password">
                         </div>
 
                         <div class="form-check form-switch mt-3">
-                            <input class="form-check-input" type="checkbox" id="estadoUsuario"
-                                 name="estado">
+                            <input class="form-check-input" type="checkbox" id="estadoUsuario" name="estado"
+                                [(ngModel)]="data_usuario.estado">
                             <label class="form-check-label" for="estadoUsuario">
                                 Usuario activo
                             </label>
@@ -68,7 +101,7 @@
 
                         <div class="d-flex justify-content-center mt-4">
                             <!-- <button type="button" class="cancelar-btn mx-1"> Cancelar</button> -->
-                            <button type="button" class="guardar-btn "> Guardar</button>
+                            <button type="button" class="guardar-btn " (click)="CrearUsuario()"> Guardar</button>
 
                         </div>
                     </fieldset>

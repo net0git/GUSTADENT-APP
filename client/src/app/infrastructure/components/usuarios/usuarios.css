@@ -1,0 +1,51 @@
+.titulo_menor{
+    font-size: 1rem;
+    font-weight: 400;
+    padding: auto;
+    margin: auto;
+    margin-top: -8px;
+}
+
+.table_header_usuarios tr th {
+  background-color: #205c89c5 !important; /* morado */
+  color: white !important;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.table_header_usuarios th:first-child {
+  border-top-left-radius: 0.5rem;
+}
+
+.table_header_usuarios th:last-child {
+  border-top-right-radius: 0.5rem;
+}
+
+
+
+
+.nombre_usuario{
+    color: rgba(32, 104, 172, 0.864);
+    font-weight: 500;
+}
+
+.table_item{
+    color: rgb(48, 49, 49);
+    
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+    padding: 0 1rem; /* opcional para evitar que se pegue a los bordes */
+  }
+
+  .titulo_menu{
+    font-size: 1.6rem;
+  }
+
+  .titulo_menor{
+    font-size: 0.9rem;
+}
+
+}

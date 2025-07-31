@@ -9,7 +9,7 @@ declare var bootstrap: any;
   templateUrl: './locacion.html',
   styleUrl: './locacion.css'
 })
-export class Locacion {
+export class Locacion  {
 
   private myModalLocacion: any;
 

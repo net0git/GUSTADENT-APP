@@ -6,12 +6,13 @@
             class="header d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center py-3">
             <div class="">
                 <p class="titulo mb-1 mb-md-0">Todos mis pacientes |<span class="subtitulo"> 87 pacientes</span> </p>
-                
+
             </div>
             <button class="btn btn-success mt-2 mt-md-0" (click)="openModalPaciente()">Nuevo paciente</button>
         </section>
         <section class="mb-3">
-            <input class="form-control form-control-sm" type="text" placeholder="buscar" aria-label=".form-control-sm example">
+            <input class="form-control form-control-sm" type="text" placeholder="buscar"
+                aria-label=".form-control-sm example">
         </section>
 
         <section class="body">
@@ -28,10 +29,11 @@
                     <tbody>
                         <tr *ngFor="let paciente of lista_pacientes; index as i">
                             <th scope="row" class="table_item">{{ i + 1 }}</th>
-                            <td class="text-start nombre_paciente">{{ paciente.nombre + ' ' + paciente.ap_paterno + ' ' +
+                            <td class="text-start nombre_paciente">{{ paciente.nombre + ' ' + paciente.ap_paterno + ' '
+                                +
                                 paciente.ap_materno }}</td>
-                            <td  class="table_item">{{ paciente.dni }}</td>
-                            <td  class="table_item">{{ paciente.telefono }}</td>
+                            <td class="table_item">{{ paciente.dni }}</td>
+                            <td class="table_item">{{ paciente.telefono }}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -40,46 +42,47 @@
     </div>
 </div>
 
-<div class="modal fade" id="modalPaciente" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="modalPaciente" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
     <div class="modal-dialog modal-custom-width" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <p class="subtitulo_menu text-white">REGISTRAR NUEVO PACIENTE</p>
-          <button type="button" class="btn-close btn-close-white" (click)="closeModalPaciente()" aria-label="Close"></button>
-        </div>
-        <div class="modal-body text-start m-0 p-0">
-           <form class="m-4">
-                <fieldset>
-                    <div class="form-group">
-                        <label for="dni" class="form-label mt-2"  name="dni" >Documento de Identidad (DNI):</label>
-                        <input type="text" class="form-control form-control-sm" name="dni"  maxlength="8" >
-                    </div>
-                    <div class="form-group">
-                        <label for="nombre" class="form-label mt-2"  name="nombre">Nombre(s):</label>
-                        <input type="text" class="form-control form-control-sm" name="nombre" >
-                    </div>
-                    <div class="form-group">
-                        <label for="ap_paterno" class="form-label mt-3" >Apellido Paterno:</label>
-                        <input type="text" class="form-control form-control-sm"  name="ap_paterno"  >
-                    </div>
-                    <div class="form-group">
-                        <label for="ap_materno" class="form-label mt-3" >Apellido Materno:</label>
-                        <input type="text" class="form-control form-control-sm"  name="ap_materno" >
-                    </div>
-                    <div class="form-group">
-                        <label for="telefono" class="form-label mt-3">Telefono:</label>
-                        <input type="text" class="form-control form-control-sm" name="telefono"  maxlength="9">
-                    </div> 
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="subtitulo_menu text-white">REGISTRAR NUEVO PACIENTE</p>
+                <button type="button" class="btn-close btn-close-white" (click)="closeModalPaciente()"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-start m-0 p-0">
+                <form class="m-4">
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="dni" class="form-label mt-2" name="dni">Documento de Identidad (DNI):</label>
+                            <input type="text" class="form-control form-control-sm" name="dni" maxlength="8">
+                        </div>
+                        <div class="form-group">
+                            <label for="nombre" class="form-label mt-2" name="nombre">Nombre(s):</label>
+                            <input type="text" class="form-control form-control-sm" name="nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="ap_paterno" class="form-label mt-3">Apellido Paterno:</label>
+                            <input type="text" class="form-control form-control-sm" name="ap_paterno">
+                        </div>
+                        <div class="form-group">
+                            <label for="ap_materno" class="form-label mt-3">Apellido Materno:</label>
+                            <input type="text" class="form-control form-control-sm" name="ap_materno">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono" class="form-label mt-3">Telefono:</label>
+                            <input type="text" class="form-control form-control-sm" name="telefono" maxlength="9">
+                        </div>
 
-                    <div class="d-flex justify-content-center mt-4">
-                        <!-- <button type="button" class="cancelar-btn mx-1"> Cancelar</button> -->
-                        <button type="button" class="guardar-btn " > Guardar</button>
-                        
-                    </div>
-                </fieldset>
-            </form>
+                        <div class="d-flex justify-content-center mt-4">
+                            <!-- <button type="button" class="cancelar-btn mx-1"> Cancelar</button> -->
+                            <button type="button" class="guardar-btn "> Guardar</button>
+
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
         </div>
-      </div>
     </div>
 </div>
-

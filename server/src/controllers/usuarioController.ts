@@ -45,7 +45,7 @@ class UsuarioController {
 
   public async listarUsuarios(req: Request, res: Response): Promise<any> {
     try {
-      const consulta = `SELECT * FROM usuarios`;
+      const consulta = `SELECT id_usuario,username,nombre,telefono,ap_paterno,ap_materno,dni,estado FROM usuarios`;
       const usuarios = await pool.query(consulta);
       res.json(usuarios["rows"]);
     } catch (error) {

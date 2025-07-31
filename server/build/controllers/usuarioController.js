@@ -50,7 +50,7 @@ class UsuarioController {
     listarUsuarios(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             try {
-                const consulta = `SELECT * FROM usuarios`;
+                const consulta = `SELECT id_usuario,username,nombre,telefono,ap_paterno,ap_materno,dni,estado FROM usuarios`;
                 const usuarios = yield database_1.pool.query(consulta);
                 res.json(usuarios["rows"]);
             }
