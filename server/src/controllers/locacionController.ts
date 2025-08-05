@@ -9,7 +9,7 @@ class LocacionController {
        res.status(200).json(locaciones["rows"])
     } catch (error) {
         console.log('error interno en el servidor');
-        res.status(500).json({text:'error interno en el servidor'})
+        res.status(500).json({message:'error interno en el servidor'})
     }
   }
 
@@ -26,12 +26,12 @@ class LocacionController {
                 console.log('no se pudo registrar locacion')
             }
             else{
-                res.status(200).json({text:'registro de locacion correcto'})
+                res.status(200).json({message:'registro de locacion correcto'})
             }
         })
     } catch (error) {
         console.log('error interno en el servidor')
-        res.status(500).json({text:'error interno en el servidor'})
+        res.status(500).json({message:'error interno en el servidor'})
     }
   }
 
@@ -48,17 +48,17 @@ public async eliminarLocacion(req: Request, res: Response) {
         pool.query(consulta, valores, (error, resultado) => {
             if (error) {
                 console.log('No se pudo eliminar la locación:', error);
-                res.status(500).json({ text: 'Error al eliminar la locación' });
+                res.status(500).json({ message: 'Error al eliminar la locación' });
             } else if (resultado.rowCount === 0) {
-                res.status(404).json({ text: 'Locación no encontrada' });
+                res.status(404).json({ message: 'Locación no encontrada' });
             } else {
-                res.status(200).json({ text: 'Locación eliminada correctamente' });
+                res.status(200).json({ message: 'Locación eliminada correctamente' });
             }
         });
 
     } catch (error) {
         console.log('Error interno en el servidor:', error);
-        res.status(500).json({ text: 'Error interno en el servidor' });
+        res.status(500).json({ message: 'Error interno en el servidor' });
     }
 }
 

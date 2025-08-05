@@ -9,9 +9,32 @@
 <div class="mt-2">
     <form class="row mx-auto mb-4">
         <div class="col-auto">
-            <button type="button" class="guardar-btn" (click)="openModalLocacion()"><i class="bi bi-geo-alt-fill"></i> nueva locación</button>
+            <button type="button" class="guardar-btn" (click)="openModalLocacion()"><i class="bi bi-geo-alt-fill"></i>
+                nueva locación</button>
         </div>
     </form>
+    <section class="table">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="table_header_usuarios">
+                    <tr>
+                        <th scope="col">Nro</th>
+                        <th scope="col" class="text-start">SUCURSAL</th>
+                        <th scope="col">DIRECCION</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let local of listLocacion; index as i">
+                        <th scope="row" class="table_item">{{ i + 1 }}</th>
+                        <td class="text-start nombre_usuario ">{{ local.locacion  }}</td>
+                        <td class="table_item">{{ local.direccion }}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
 </div>
 
 <div class="modal fade" id="modalLocacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -26,19 +49,19 @@
             <div class="modal-body text-start m-0 p-0">
                 <form class="m-4">
                     <fieldset>
-                       
+
                         <div class="form-group">
                             <label for="locacion" class="form-label mt-2" name="locacion">Locación:</label>
-                            <input type="text" class="form-control form-control-sm" name="locacion">
+                            <input type="text" class="form-control form-control-sm" name="locacion" [(ngModel)]="locacion.locacion">
                         </div>
                         <div class="form-group">
                             <label for="direccion" class="form-label mt-3">Dirección:</label>
-                            <input type="text" class="form-control form-control-sm" name="direccion">
+                            <input type="text" class="form-control form-control-sm" name="direccion" [(ngModel)]="locacion.direccion">
                         </div>
-                       
+
                         <div class="d-flex justify-content-center mt-4">
                             <!-- <button type="button" class="cancelar-btn mx-1"> Cancelar</button> -->
-                            <button type="button" class="guardar-btn "> Guardar</button>
+                            <button type="button" class="guardar-btn " (click)="guardarLocacion()"> Guardar</button>
                         </div>
                     </fieldset>
                 </form>
