@@ -9,6 +9,7 @@ const morgan_1 = __importDefault(require("morgan"));
 const usuarioRoutes_1 = __importDefault(require("./routes/usuarioRoutes"));
 const atencionRoutes_1 = __importDefault(require("./routes/atencionRoutes"));
 const locacionRoutes_1 = __importDefault(require("./routes/locacionRoutes"));
+const pacienteRoutes_1 = __importDefault(require("./routes/pacienteRoutes"));
 class Server {
     constructor() {
         this.app = (0, express_1.default)();
@@ -26,6 +27,7 @@ class Server {
         this.app.use("/", usuarioRoutes_1.default);
         this.app.use("/", atencionRoutes_1.default);
         this.app.use("/", locacionRoutes_1.default);
+        this.app.use("/", pacienteRoutes_1.default);
     }
     star() {
         this.app.listen(this.app.get("port"), "0.0.0.0", () => {

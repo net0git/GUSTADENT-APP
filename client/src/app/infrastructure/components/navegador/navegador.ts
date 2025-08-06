@@ -57,4 +57,8 @@ export class Navegador implements OnInit{
   configuracion(){
     this.router.navigate(['principal/configuracion'])
   }
+
+  principal(){
+    this.router.navigate(['principal'])
+  }
 }

@@ -5,7 +5,7 @@
         <section
             class="header d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center py-3">
             <div class="">
-                <p class="titulo mb-1 mb-md-0">Todos mis pacientes |<span class="subtitulo"> 87 pacientes</span> </p>
+                <p class="titulo mb-1 mb-md-0">Todos mis pacientes |<span class="subtitulo"> {{this.lista_pacientes.length}} pacientes</span> </p>
 
             </div>
             <button class="btn btn-success mt-2 mt-md-0" (click)="openModalPaciente()">Nuevo paciente</button>
@@ -55,29 +55,29 @@
                 <form class="m-4">
                     <fieldset>
                         <div class="form-group">
-                            <label for="dni" class="form-label mt-2" name="dni">Documento de Identidad (DNI):</label>
-                            <input type="text" class="form-control form-control-sm" name="dni" maxlength="8">
+                            <label for="dni" class="form-label mt-2" name="dni" >Documento de Identidad (DNI):</label>
+                            <input type="text" class="form-control form-control-sm" name="dni" maxlength="8" [(ngModel)]="paciente_temp.dni">
                         </div>
                         <div class="form-group">
-                            <label for="nombre" class="form-label mt-2" name="nombre">Nombre(s):</label>
-                            <input type="text" class="form-control form-control-sm" name="nombre">
+                            <label for="nombre" class="form-label mt-2" name="nombre" >Nombre(s):</label>
+                            <input type="text" class="form-control form-control-sm" name="nombre" [(ngModel)]="paciente_temp.nombre">
                         </div>
                         <div class="form-group">
                             <label for="ap_paterno" class="form-label mt-3">Apellido Paterno:</label>
-                            <input type="text" class="form-control form-control-sm" name="ap_paterno">
+                            <input type="text" class="form-control form-control-sm" name="ap_paterno" [(ngModel)]="paciente_temp.ap_paterno">
                         </div>
                         <div class="form-group">
                             <label for="ap_materno" class="form-label mt-3">Apellido Materno:</label>
-                            <input type="text" class="form-control form-control-sm" name="ap_materno">
+                            <input type="text" class="form-control form-control-sm" name="ap_materno" [(ngModel)]="paciente_temp.ap_materno">
                         </div>
                         <div class="form-group">
                             <label for="telefono" class="form-label mt-3">Telefono:</label>
-                            <input type="text" class="form-control form-control-sm" name="telefono" maxlength="9">
+                            <input type="text" class="form-control form-control-sm" name="telefono" maxlength="9" [(ngModel)]="paciente_temp.telefono">
                         </div>
 
                         <div class="d-flex justify-content-center mt-4">
                             <!-- <button type="button" class="cancelar-btn mx-1"> Cancelar</button> -->
-                            <button type="button" class="guardar-btn "> Guardar</button>
+                            <button type="button" class="guardar-btn " (click)="guardarPaciente()"> Guardar</button>
 
                         </div>
                     </fieldset>
